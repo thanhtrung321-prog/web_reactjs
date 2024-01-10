@@ -1,12 +1,12 @@
 import React from "react";
-import Navbarl from "./components/Navbar/Navbar";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Products from "./components/Products/Product";
 import TopProducts from "./components/TopProducts/TopProducts";
+import Banner from "./components/Banner/Banner";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+// hàm giúp làm hiệu ứng load sản phẩm
 const App = () => {
   React.useEffect(() => {
     AOS.init({
@@ -23,6 +23,7 @@ const App = () => {
       <Hero />
       <Products />
       <TopProducts />
+      <Banner />
     </div>
   );
 };

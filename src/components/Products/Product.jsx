@@ -50,7 +50,7 @@ const ProductsData = [
 
 const Products = () => {
   return (
-    <div className="mt-14 mb-12">
+    <div className="mt-14 mb-12 dark:">
       <div className="container">
         {/* Header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
@@ -93,7 +93,7 @@ const Products = () => {
             ))}
           </div>
           {/* view all button */}
-          <div className="flex justify-center">
+          <div className="flex justify-center" data-aos="fade-up">
             <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
               Xem tất cả sản phẩm
             </button>
