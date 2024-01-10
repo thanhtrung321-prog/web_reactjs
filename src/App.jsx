@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Products from "./components/Products/Product";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Banner from "./components/Banner/Banner";
+import Subscribe from "./components/Subscribe/Subscribe";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // hàm giúp làm hiệu ứng load sản phẩm
@@ -24,6 +25,7 @@ const App = () => {
       <Products />
       <TopProducts />
       <Banner />
+      <Subscribe />
     </div>
   );
 };
