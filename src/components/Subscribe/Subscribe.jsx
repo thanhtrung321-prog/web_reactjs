@@ -15,7 +15,19 @@ const Subscribe = () => {
       className="bg-gray-100 dark:bg-gray-800 text-white"
       style={BannerImg}
     >
-      <div></div>
+      <div className="container backdrop-blur-sm py-10">
+        <div>
+          <h1 className="text-2xl !text-center sm:text-left sm:text-4xl font-semibold">
+            Nhận thông báo về sản phẩm mới
+          </h1>
+        </div>
+        <input
+          type="text"
+          data-aos="face-up"
+          placeholder="Nhập vào Email của bạn"
+          className="w-full p-3"
+        />
+      </div>
     </div>
   );
 };
