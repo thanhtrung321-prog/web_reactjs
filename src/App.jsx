@@ -5,6 +5,8 @@ import Products from "./components/Products/Product";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Banner from "./components/Banner/Banner";
 import Subscribe from "./components/Subscribe/Subscribe";
+import Testimoials from "./components/Testimonial/Testimoials";
+import Footer from "./components/footer/footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // hàm giúp làm hiệu ứng load sản phẩm
@@ -24,8 +26,11 @@ const App = () => {
       <Hero />
       <Products />
       <TopProducts />
-      <Banner />
+      <Banner/>
       <Subscribe />
+      <Products />
+      <Testimoials />
+      <Footer />
     </div>
   );
 };
