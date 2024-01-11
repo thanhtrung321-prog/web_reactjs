@@ -1,6 +1,9 @@
 import React from "react";
 import footerLogo from "../../assets/logo.png";
 import Banner from "../../assets/website/footer-pattern.jpg";
+import { FaGit } from "react-icons/fa";
+import { CiInstagram } from "react-icons/ci";
+import { MdEmail } from "react-icons/md";
 import {
   FaFacebook,
   FaInstagram,
@@ -36,9 +39,9 @@ const FooterLinks = [
     link: "/#blog",
   },
   {
-    title:"Hỗ trợ khách hàng",
-    link:"/#suport"
-  }
+    title: "Hỗ trợ khách hàng",
+    link: "/#suport",
+  },
 ];
 
 const Footer = () => {
@@ -52,7 +55,8 @@ const Footer = () => {
               <img src={footerLogo} alt="" className="max-w-[80px]" />
             </h1>
             <p className="text-xl dark:text-white">
-              Hân hạnh phục vụ khách hàng ,vì bạn là niềm vui của .shop,cảm ơn bạn vì thời gian qua....
+              Hân hạnh phục vụ khách hàng ,vì bạn là niềm vui của .shop,cảm ơn
+              bạn vì thời gian qua....
             </p>
           </div>
 
@@ -115,6 +119,29 @@ const Footer = () => {
                 <div className="flex items-center gap-3 mt-3">
                   <FaMobileAlt />
                   <p>+0379263053</p>
+                </div>
+                <div className="flex items-center gap-3 mt-3">
+                  <MdEmail />
+                  <p>Thanhtrung@gmail.com</p>
+                </div>
+                <div className="flex items-center gap-3 mt-3">
+                  <FaGit />
+                  <p>
+                    <a
+                      className=" line-clamp-1 hover:line-clamp-none dark:text-red-500"
+                      href="https://github.com/thanhtrung321-prog/web_reactjs"
+                    >
+                      https://github.com/thanhtrung321-prog/web_reactjs
+                    </a>
+                  </p>
+                </div>
+                <div className="flex items-center gap-3 mt-3">
+                  <CiInstagram />
+                  <p>
+                    <a className="dark:text-yellow-400 " href="">
+                      Võ Thành Trung
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
