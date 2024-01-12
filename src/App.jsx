@@ -8,9 +8,16 @@ import Subscribe from "./components/Subscribe/Subscribe";
 import Testimoials from "./components/Testimonial/Testimoials";
 import Footer from "./components/footer/footer";
 import AOS from "aos";
+import Popup from "./components/Popup/Popup";
 import "aos/dist/aos.css";
 // hàm giúp làm hiệu ứng load sản phẩm
+
 const App = () => {
+  const [orderPopup, setOrderPopup] = React.useState(false);
+
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
   React.useEffect(() => {
     AOS.init({
       offset: 100,
@@ -22,15 +29,16 @@ const App = () => {
   }, []);
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar />
-      <Hero />
+      <Navbar handleOrderPopup={handleOrderPopup} />
+      <Hero handleOrderPopup={handleOrderPopup} />
       <Products />
-      <TopProducts />
+      <TopProducts handleOrderPopup={handleOrderPopup} />
       <Banner />
       <Subscribe />
       <Products />
       <Testimoials />
       <Footer />
+      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
     </div>
   );
 };

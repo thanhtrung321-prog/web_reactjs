@@ -48,7 +48,7 @@ const ProductsData = [
   },
 ];
 
-const Products = () => {
+const Products = ({ handleOrderPopup }) => {
   return (
     <div className=" mt-14 mb-12 dark:">
       <div className="container">
