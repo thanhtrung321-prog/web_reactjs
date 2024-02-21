@@ -10,7 +10,8 @@ import Footer from "./components/footer/footer";
 import AOS from "aos";
 import Popup from "./components/Popup/Popup";
 import "aos/dist/aos.css";
-// hàm giúp làm hiệu ứng load sản phẩm
+
+//hàm giúp làm hiệu ứng load sản phẩm
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);

@@ -11,7 +11,7 @@ const Popup = ({ orderPopup, setOrderPopup }) => {
               {/* header */}
               <div className="flex items-center justify-between">
                 <div>
-                  <h1>Mua Ngay</h1>
+                  <h1>Thông Tin Khách hàng</h1>
                 </div>
                 <div>
                   <IoCloseOutline
