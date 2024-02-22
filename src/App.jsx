@@ -39,14 +39,14 @@ const App = () => {
             path="/"
             element={<HomePage handleOrderPopup={handleOrderPopup} />}
           />
-          <Route path="/DetailProduct" element={<Detailproduct />} />
+          <Route path="detailProduct" element={<Detailproduct />} />
         </Routes>
         <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
       </div>
     </Router>
   );
 };
-
+// tạo 1 hàm khi chứa toàn bộ bạn cần hiển thị
 const HomePage = ({ handleOrderPopup }) => (
   <>
     <Hero handleOrderPopup={handleOrderPopup} />

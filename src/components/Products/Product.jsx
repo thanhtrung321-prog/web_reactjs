@@ -4,6 +4,7 @@ import Img2 from "../../assets/women/women2.jpg";
 import Img3 from "../../assets/women/women3.jpg";
 import Img4 from "../../assets/women/women4.jpg";
 import { FaStar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const ProductsData = [
   {
@@ -76,11 +77,14 @@ const Products = ({ handleOrderPopup }) => {
                 key={data.id}
                 className="space-y-3"
               >
-                <img
-                  src={data.img}
-                  alt={data.img}
-                  className="h-[220px] w-[150px] object-cover rounded-md transform hover:scale-95"
-                />
+                {/* này giúp lấy link và id sản phẩm */}
+                <Link to={`/detailproduct/${data.id}`} className="product-link">
+                  <img
+                    src={data.img}
+                    alt={data.img}
+                    className="h-[220px] w-[150px] object-cover rounded-md transform hover:scale-95"
+                  />
+                </Link>
                 <div>
                   <h3 className="font-semibold">{data.title}</h3>
                   <p className="text-sm text-gray-600">{data.color}</p>
