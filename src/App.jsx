@@ -10,8 +10,8 @@ import Footer from "./components/footer/footer";
 import AOS from "aos";
 import Popup from "./components/Popup/Popup";
 import "aos/dist/aos.css";
-
-//hàm giúp làm hiệu ứng load sản phẩm
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Detailproduct from "../src/components/Detailproduct/Detailproduct.jsx";
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -19,6 +19,7 @@ const App = () => {
   const handleOrderPopup = () => {
     setOrderPopup(!orderPopup);
   };
+
   React.useEffect(() => {
     AOS.init({
       offset: 100,
@@ -28,20 +29,35 @@ const App = () => {
     });
     AOS.refresh();
   }, []);
+
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar handleOrderPopup={handleOrderPopup} />
-      <Hero handleOrderPopup={handleOrderPopup} />
-      <Products />
-      <TopProducts handleOrderPopup={handleOrderPopup} />
-      <Banner />
-      <Subscribe />
-      <Products />
-      <Testimoials />
-      <Footer />
-      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
-    </div>
+    <Router>
+      <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+        <Navbar handleOrderPopup={handleOrderPopup} />
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage handleOrderPopup={handleOrderPopup} />}
+          />
+          <Route path="/DetailProduct" element={<Detailproduct />} />
+        </Routes>
+        <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+      </div>
+    </Router>
   );
 };
+
+const HomePage = ({ handleOrderPopup }) => (
+  <>
+    <Hero handleOrderPopup={handleOrderPopup} />
+    <Products />
+    <TopProducts handleOrderPopup={handleOrderPopup} />
+    <Banner />
+    <Subscribe />
+    <Products />
+    <Testimoials />
+    <Footer />
+  </>
+);
 
 export default App;

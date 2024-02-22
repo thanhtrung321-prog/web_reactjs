@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 import img1 from "../../assets/women/women.png";
 import img2 from "../../assets/women/women2.jpg";
 import img3 from "../../assets/women/women3.jpg";
@@ -45,19 +45,22 @@ const DetailProduct = () => {
   };
 
   return (
-    <div data-aos="zoom-out" className="flex flex-col justify-between lg:flex-row gap-16 lg:items-center">
+    <div
+      data-aos="zoom-out"
+      className="flex flex-col justify-between lg:flex-row gap-16 lg:items-center"
+    >
       <div className="flex flex-col gap-6 lg:w-2/4">
         <img
           src={activeImg.img}
           alt=""
           className="w-full h-full aspect-square object-cover rounded-xl"
         />
-        <div  className=" flex flex-row justify-between h-24">
+        <div className=" flex flex-row justify-between h-24">
           {images.map((image, index) => (
-            <img 
+            <img
               key={index}
               src={image.img}
-              alt="" 
+              alt=""
               className="w-24 h-24 rounded-md cursor-pointer"
               onClick={() => handleImageClick(image)}
             />
@@ -90,7 +93,7 @@ const DetailProduct = () => {
               +
             </button>
           </div>
-          <button  className="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full ">
+          <button className="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full ">
             Mua Hàng
           </button>
         </div>
