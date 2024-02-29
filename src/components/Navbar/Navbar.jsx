@@ -12,28 +12,28 @@ const Menu = [
   },
   {
     id: 2,
-    name: "Đồ ngủ",
-    link: "/detailproduct",
+    name: "Giới thiệu",
+    link: "/introduce",
   },
   {
     id: 3,
-    name: "Áo khoác",
-    link: "/#",
+    name: "Sản Phẩm/Dịch vụ",
+    link: "/productitems",
   },
   {
     id: 4,
-    name: "Áo len",
-    link: "/#",
+    name: "Liên hệ",
+    link: "/contact",
   },
   {
     id: 5,
-    name: "Áo sơ mi",
-    link: "/#",
+    name: "Tuyển dụng cộng tác viên",
+    link: "recruitment",
   },
   {
     id: 6,
-    name: "Áo thun",
-    link: "/#",
+    name: "chính sách đổi trả",
+    link: "/policypage",
   },
 ];
 const DropdownLinks = [

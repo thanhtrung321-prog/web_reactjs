@@ -12,7 +12,8 @@ import Popup from "./components/Popup/Popup";
 import "aos/dist/aos.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Detailproduct from "../src/components/Detailproduct/Detailproduct.jsx";
-
+import Introduce from "../src/components/Introduce/Introduce.jsx";
+import * as THREE from "three";
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
 
@@ -40,6 +41,7 @@ const App = () => {
             element={<HomePage handleOrderPopup={handleOrderPopup} />}
           />
           <Route path="detailProduct" element={<Detailproduct />} />
+          <Route path="introduce" element={<Introduce />} />
         </Routes>
         <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
       </div>
